@@ -47,6 +47,9 @@ dependencies:
   http: ^1.6.0
   flutter_bloc: ^9.1.1
   equatable: ^2.0.8
+  geolocator: ^14.0.2
+  flutter_compass: ^0.8.1
+  permission_handler: ^12.0.1
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +78,7 @@ flutter:
     - assets/images/koran.png
     - assets/images/hadith.png
     - assets/images/background_image.png
+    - assets/adkar.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

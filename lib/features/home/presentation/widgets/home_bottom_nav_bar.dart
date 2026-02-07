@@ -7,6 +7,7 @@ import 'package:mihrap_app/features/hadith/presentation/screens/hadith_books_scr
 import '../../../../core/constants/app_colors.dart';
 import '../../../quran/presentation/screens/quran_home_screen.dart';
 import '../../../tasbeeh/presentation/screens/tasbeeh_screen.dart';
+import '../../../settings/presentation/screens/settings_screen.dart';
 import '../screens/home_screen.dart';
 
 /// Bottom navigation bar widget - Exact Stitch Design
@@ -58,6 +59,9 @@ class _HomeBottomNavBarState extends State<HomeBottomNavBar> {
         );
         break;
       case 4:
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const SettingsScreen()),
+        );
         break;
     }
   }

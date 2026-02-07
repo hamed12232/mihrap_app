@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../core/constants/app_colors.dart';
+import '../../../adhkar/presentation/screens/adhkar_screen.dart';
+import '../../../qibla/presentation/screens/qibla_screen.dart';
 import '../widgets/home_bottom_nav_bar.dart';
 import '../widgets/home_header.dart';
 import '../widgets/prayer_card.dart';
@@ -113,14 +115,20 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     // Quick Action Buttons
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           QuickActionButton(
                             icon: Iconsax.discover,
                             label: 'القبلة',
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => const QiblaScreen(),
+                                ),
+                              );
+                            },
                           ),
                           const SizedBox(width: 12),
                           QuickActionButton(
@@ -132,7 +140,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           QuickActionButton(
                             icon: Iconsax.bookmark,
                             label: 'الأذكار',
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => const AdhkarScreen(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
